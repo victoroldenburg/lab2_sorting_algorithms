@@ -114,11 +114,13 @@
     <ClCompile Include="load_file.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="mergesort_func.c" />
+    <ClCompile Include="test.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="insertsort.h" />
     <ClInclude Include="load_file.h" />
     <ClInclude Include="mergesort.h" />
+    <ClInclude Include="test.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\sorting_problems\test-10-1-problem" />
