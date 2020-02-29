@@ -110,11 +110,69 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="function.c" />
+    <ClCompile Include="insertsort_func.c" />
+    <ClCompile Include="load_file.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="mergesort_func.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Header.h" />
+    <ClInclude Include="insertsort.h" />
+    <ClInclude Include="load_file.h" />
+    <ClInclude Include="mergesort.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\sorting_problems\test-10-1-problem" />
+    <None Include="..\sorting_problems\test-10-1-solution" />
+    <None Include="..\sorting_problems\test-10-2-problem" />
+    <None Include="..\sorting_problems\test-10-2-solution" />
+    <None Include="..\sorting_problems\test-10-3-problem" />
+    <None Include="..\sorting_problems\test-10-3-solution" />
+    <None Include="..\sorting_problems\test-10-4-problem" />
+    <None Include="..\sorting_problems\test-10-4-solution" />
+    <None Include="..\sorting_problems\test-10-5-problem" />
+    <None Include="..\sorting_problems\test-10-5-solution" />
+    <None Include="..\sorting_problems\test-10-problem" />
+    <None Include="..\sorting_problems\test-10-solution" />
+    <None Include="..\sorting_problems\test-100-1-problem" />
+    <None Include="..\sorting_problems\test-100-1-solution" />
+    <None Include="..\sorting_problems\test-100-2-problem" />
+    <None Include="..\sorting_problems\test-100-2-solution" />
+    <None Include="..\sorting_problems\test-100-3-problem" />
+    <None Include="..\sorting_problems\test-100-3-solution" />
+    <None Include="..\sorting_problems\test-100-4-problem" />
+    <None Include="..\sorting_problems\test-100-4-solution" />
+    <None Include="..\sorting_problems\test-100-5-problem" />
+    <None Include="..\sorting_problems\test-100-5-solution" />
+    <None Include="..\sorting_problems\test-1000-1-problem" />
+    <None Include="..\sorting_problems\test-1000-1-solution" />
+    <None Include="..\sorting_problems\test-1000-2-problem" />
+    <None Include="..\sorting_problems\test-1000-2-solution" />
+    <None Include="..\sorting_problems\test-1000-3-problem" />
+    <None Include="..\sorting_problems\test-1000-3-solution" />
+    <None Include="..\sorting_problems\test-1000-4-problem" />
+    <None Include="..\sorting_problems\test-1000-4-solution" />
+    <None Include="..\sorting_problems\test-1000-5-problem" />
+    <None Include="..\sorting_problems\test-1000-5-solution" />
+    <None Include="..\sorting_problems\test-10000-1-problem" />
+    <None Include="..\sorting_problems\test-10000-1-solution" />
+    <None Include="..\sorting_problems\test-10000-2-problem" />
+    <None Include="..\sorting_problems\test-10000-2-solution" />
+    <None Include="..\sorting_problems\test-10000-3-problem" />
+    <None Include="..\sorting_problems\test-10000-3-solution" />
+    <None Include="..\sorting_problems\test-10000-4-problem" />
+    <None Include="..\sorting_problems\test-10000-4-solution" />
+    <None Include="..\sorting_problems\test-10000-5-problem" />
+    <None Include="..\sorting_problems\test-10000-5-solution" />
+    <None Include="..\sorting_problems\test-100000-1-problem" />
+    <None Include="..\sorting_problems\test-100000-1-solution" />
+    <None Include="..\sorting_problems\test-100000-2-problem" />
+    <None Include="..\sorting_problems\test-100000-2-solution" />
+    <None Include="..\sorting_problems\test-100000-3-problem" />
+    <None Include="..\sorting_problems\test-100000-3-solution" />
+    <None Include="..\sorting_problems\test-100000-4-problem" />
+    <None Include="..\sorting_problems\test-100000-4-solution" />
+    <None Include="..\sorting_problems\test-100000-5-problem" />
+    <None Include="..\sorting_problems\test-100000-5-solution" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

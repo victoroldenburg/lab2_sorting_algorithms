@@ -15,16 +15,186 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="function.c">
+    <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main.c">
+    <ClCompile Include="insertsort_func.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="load_file.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mergesort_func.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Header.h">
-      <Filter>Resource Files</Filter>
+    <ClInclude Include="insertsort.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="load_file.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mergesort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\sorting_problems\test-10-1-problem">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-10-1-solution">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-10-2-problem">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-10-2-solution">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-10-3-problem">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-10-3-solution">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-10-4-problem">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-10-4-solution">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-10-5-problem">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-10-5-solution">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-10-problem">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-10-solution">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-100-1-problem">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-100-1-solution">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-100-2-problem">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-100-2-solution">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-100-3-problem">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-100-3-solution">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-100-4-problem">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-100-4-solution">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-100-5-problem">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-100-5-solution">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-1000-1-problem">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-1000-1-solution">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-1000-2-problem">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-1000-2-solution">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-1000-3-problem">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-1000-3-solution">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-1000-4-problem">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-1000-4-solution">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-1000-5-problem">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-1000-5-solution">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-10000-1-problem">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-10000-1-solution">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-10000-2-problem">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-10000-2-solution">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-10000-3-problem">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-10000-3-solution">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-10000-4-problem">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-10000-4-solution">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-10000-5-problem">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-10000-5-solution">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-100000-1-problem">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-100000-1-solution">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-100000-2-problem">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-100000-2-solution">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-100000-3-problem">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-100000-3-solution">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-100000-4-problem">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-100000-4-solution">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-100000-5-problem">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\sorting_problems\test-100000-5-solution">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
