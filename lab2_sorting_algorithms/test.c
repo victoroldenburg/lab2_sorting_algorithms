@@ -1,6 +1,7 @@
 #include "test.h"
 #include "mergesort.h"
 #include "insertsort.h"
+#include "load_file.h"
 
 
 void test_InsertionSort()
@@ -44,7 +45,7 @@ void test_InsertionSort_loadf()
 
 	int n = problemArr[0] + 1;
 
-	printf("Task 5: Verify implemented sort algorithms with load files\n\n");
+	printf("Task 5: Insertion Sort\n\n");
 
 	printf("Default data\n");
 	printArray(problemArr, n);
@@ -89,8 +90,5 @@ printArray(sortedArray_loadf, n);
 
 printf("The correct solution\n");
 printArray(solutionArr, n);
-
-printf("Default data\n");
-printArray(problemArr, n);
 
 }

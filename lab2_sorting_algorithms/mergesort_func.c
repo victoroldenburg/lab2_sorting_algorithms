@@ -66,14 +66,6 @@ void MergeSort(int* A, int p, int r)
 }
 
 
-//void printArray(int* A, int n) 
-//{
-//		for (int loop = 0; loop < n; loop++) 
-//		{
-//			printf("%d ", A[loop]);
-//		}
-//}
-
 int* Merge_loadf(int* A, int p, int q, int r)
 {
 
@@ -81,8 +73,11 @@ int* Merge_loadf(int* A, int p, int q, int r)
 	int n2 = r - q;
 
 
+
 	int* L = malloc((n1 + 1) * sizeof(int));
 	int* R = malloc((n2 + 1) * sizeof(int));
+
+
 
 
 	for (int i = 1; i <= n1; i++)
@@ -97,8 +92,13 @@ int* Merge_loadf(int* A, int p, int q, int r)
 		R[j] = A[q + j];
 	}
 
-	L[n1 + 1] = INT_MAX;
-	R[n2 + 1] = INT_MAX;
+	
+	if (R != 0 && L!=0)
+	{
+		L[n1 + 1] = INT_MAX;
+		R[n2 + 1] = INT_MAX;
+
+	}
 
 
 	int i = 1;
@@ -106,7 +106,6 @@ int* Merge_loadf(int* A, int p, int q, int r)
 
 	for (int k = p; k <= r; k++)
 	{
-
 		if (L[i] <= R[j])
 		{
 			A[k] = L[i];
@@ -134,5 +133,5 @@ int* MergeSort_loadf(int* A, int p, int r)
 		Merge_loadf(A, p, q, r);
 
 	}
-	return 0;
+	return A;
 }
