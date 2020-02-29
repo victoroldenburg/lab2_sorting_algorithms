@@ -64,28 +64,33 @@ void test_InsertionSort_loadf()
 
 void test_MergeSort_loadf()
 {
-//	//################TASK5 LOAD FILES - MERGE SORT#######################################
-//char sortingProblem[] = { "../sorting_problems/test-100-1-problem" };
-//char sortingSolution[] = { "../sorting_problems/test-100-1-solution" };
-//int* problemArr = load_file(sortingProblem);
-//int* solutionArr = load_file(sortingSolution);
-//
-//int n = problemArr[0] + 1;
-//
-//printf("Task 5: Verify implemented sort algorithms with load files\n\n");
-//
-//printf("Default data\n");
-//printArray(problemArr, n);
-//
-//int* sortedArray_loadf = insertionSort_loadf(problemArr, n);
-//
-//printf("Sorted array\n");
-//printArray(sortedArray_loadf, n);
-//
-//printf("The correct solution\n");
-//printArray(solutionArr, n);
-//
-//printf("Default data\n");
-//printArray(problemArr, n);
+	//################TASK5 LOAD FILES - MERGE SORT#######################################
+char sortingProblem[] = { "../sorting_problems/test-100-1-problem" };
+char sortingSolution[] = { "../sorting_problems/test-100-1-solution" };
+int* problemArr = load_file(sortingProblem);
+int* solutionArr = load_file(sortingSolution);
+
+int n = problemArr[0] + 1;
+
+int p = 0;
+int r = n - 1;
+
+
+
+printf("Task 5: Merge Sort\n\n");
+
+printf("Default data\n");
+printArray(problemArr, n);
+
+int* sortedArray_loadf = MergeSort_loadf(problemArr, p, r);
+
+printf("Sorted array\n");
+printArray(sortedArray_loadf, n);
+
+printf("The correct solution\n");
+printArray(solutionArr, n);
+
+printf("Default data\n");
+printArray(problemArr, n);
 
 }

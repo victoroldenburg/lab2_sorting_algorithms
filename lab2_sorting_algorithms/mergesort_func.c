@@ -118,6 +118,7 @@ int* Merge_loadf(int* A, int p, int q, int r)
 			j++;
 		}
 	}
+	return 0;
 }
 
 
@@ -128,9 +129,10 @@ int* MergeSort_loadf(int* A, int p, int r)
 		double qD = floor((p + r) / 2);
 		int q = (int)qD;
 
-		MergeSort(A, p, q);
-		MergeSort(A, q + 1, r);
-		Merge(A, p, q, r);
+		MergeSort_loadf(A, p, q);
+		MergeSort_loadf(A, q + 1, r);
+		Merge_loadf(A, p, q, r);
 
 	}
+	return 0;
 }

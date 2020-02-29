@@ -1,6 +1,7 @@
 #include "insertsort.h"
 #include "load_file.h"
 #include "mergesort.h"
+#include "test.h"
 #include <stdbool.h>
 #include <stdio.h>
 #include < stdlib.h >
