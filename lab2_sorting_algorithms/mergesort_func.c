@@ -4,6 +4,7 @@
 #include <stdlib.h >
 #include <math.h>
 
+
 void Merge(int* A, int p, int q, int r)
 {
 
@@ -11,8 +12,9 @@ void Merge(int* A, int p, int q, int r)
 	int n2 = r - q;
 
 
-	int* L = malloc((n1 + 1)  * sizeof(int));
-	int* R = malloc((n2 + 1) * sizeof(int));
+	int* L = (int*)calloc(n2 + 8, sizeof(int));
+	int* R = (int*)calloc(n2 + 8, sizeof(int));
+
 
 	if (R != 0 && L != 0) {
 
@@ -30,6 +32,7 @@ void Merge(int* A, int p, int q, int r)
 		}
 
 		L[n1 + 1] = INT_MAX;
+
 		R[n2 + 1] = INT_MAX;
 
 
@@ -50,7 +53,11 @@ void Merge(int* A, int p, int q, int r)
 				j++;
 			}
 		}
+		free(L);
+		free(R);
+
 	}
+
 }
 
 
@@ -61,8 +68,8 @@ void MergeSort(int* A, int p, int r)
 		double qD = floor((p + r) / 2);
 		int q = (int)qD;
 
-		//MergeSort(A, p, q);
-		//MergeSort(A, q + 1, r);
+		MergeSort(A, p, q);
+		MergeSort(A, q + 1, r);
 		Merge(A, p, q, r);
 
 	}
@@ -72,13 +79,13 @@ void MergeSort(int* A, int p, int r)
 int* Merge_loadf(int* A, int p, int q, int r)
 {
 
-	int n1 = q - p + 1;
-	int n2 = r - q;
+	const int n1 = q - p + 1;
+	const int n2 = r - q;
 
 
 
-	int* L = malloc((n1 + 1) * sizeof(int));
-	int* R = malloc((n2 + 1) * sizeof(int));
+	int* L = (int*)calloc(n2 + 8, sizeof(int));
+	int* R = (int*)calloc(n2 + 8, sizeof(int));
 
 	if (R != 0 && L != 0) {
 
