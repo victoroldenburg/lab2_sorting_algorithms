@@ -2,6 +2,8 @@
 #include "mergesort.h"
 #include "insertsort.h"
 #include "load_file.h"
+#include <time.h>
+#include <Windows.h>
 
 
 void test_InsertionSort()
@@ -38,10 +40,12 @@ void test_MergeSort()
 void test_InsertionSort_loadf()
 {
 	//################TASK5 LOAD FILES - INSERTION SORT#######################################
-	char sortingProblem[] = { "../sorting_problems/test-100-1-problem" };
-	char sortingSolution[] = { "../sorting_problems/test-100-1-solution" };
+	char sortingProblem[] = { "../sorting_problems/test-100000-1-problem" };
+	char sortingSolution[] = { "../sorting_problems/test-100000-1-solution" };
 	int* problemArr = load_file(sortingProblem);
 	int* solutionArr = load_file(sortingSolution);
+
+	float time_spent = 0.0; //to store execution time
 
 	int n = problemArr[0] + 1;
 
@@ -50,7 +54,16 @@ void test_InsertionSort_loadf()
 	printf("Default data\n");
 	printArray(problemArr, n);
 
+	clock_t start = clock();
 	int* sortedArray_loadf = insertionSort_loadf(problemArr, n);
+	clock_t end = clock();
+
+	time_spent = ((float)(end - start)) / CLOCKS_PER_SEC;
+
+
+	printf("Insertion Sort took %f seconds to execute \n", time_spent);
+
+	printf("%f ", time_spent);
 
 	printf("Sorted array\n");
 	printArray(sortedArray_loadf, n);
@@ -66,16 +79,16 @@ void test_InsertionSort_loadf()
 void test_MergeSort_loadf()
 {
 	//################TASK5 LOAD FILES - MERGE SORT#######################################
-char sortingProblem[] = { "../sorting_problems/test-100-1-problem" };
-char sortingSolution[] = { "../sorting_problems/test-100-1-solution" };
+char sortingProblem[] = { "../sorting_problems/test-100000-1-problem" };
+char sortingSolution[] = { "../sorting_problems/test-100000-1-solution" };
 int* problemArr = load_file(sortingProblem);
 int* solutionArr = load_file(sortingSolution);
 
 int n = problemArr[0] + 1;
-
-int p = 0;
+int p = 1;
 int r = n - 1;
 
+double time_spent = 0.0; //to store execution time
 
 
 printf("Task 5: Merge Sort\n\n");
@@ -83,7 +96,15 @@ printf("Task 5: Merge Sort\n\n");
 printf("Default data\n");
 printArray(problemArr, n);
 
+clock_t start = clock();
 int* sortedArray_loadf = MergeSort_loadf(problemArr, p, r);
+clock_t end = clock();
+
+time_spent= ((float)(end - start)) / CLOCKS_PER_SEC;
+
+
+printf("Merge Sort took %f seconds to execute \n", time_spent);
+
 
 printf("Sorted array\n");
 printArray(sortedArray_loadf, n);
@@ -92,3 +113,15 @@ printf("The correct solution\n");
 printArray(solutionArr, n);
 
 }
+
+void printArray(int arr[], int n)
+{
+
+
+	for (int i = 0; i < n && i<=100; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+	printf("\n\n\n");
+}
+
