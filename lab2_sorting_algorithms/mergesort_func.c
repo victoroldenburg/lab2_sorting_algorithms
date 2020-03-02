@@ -12,7 +12,7 @@ void Merge(int* A, int p, int q, int r)
 	int n2 = r - q;
 
 
-	int* L = (int*)calloc(n2 + 8, sizeof(int));
+	int* L = (int*)calloc(n1 + 8, sizeof(int)); //This works, warnings are compiler dependent.
 	int* R = (int*)calloc(n2 + 8, sizeof(int));
 
 
@@ -84,7 +84,7 @@ int* Merge_loadf(int* A, int p, int q, int r)
 
 
 
-	int* L = (int*)calloc(n2 + 8, sizeof(int));
+	int* L = (int*)calloc(n1 + 8, sizeof(int));
 	int* R = (int*)calloc(n2 + 8, sizeof(int));
 
 	if (R != 0 && L != 0) {

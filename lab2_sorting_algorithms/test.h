@@ -10,4 +10,4 @@ void test_MergeSort_loadf();
 
 void printArray(int arr[], int n);
 
-
+void printPersonalnumber(int arr[], int n);

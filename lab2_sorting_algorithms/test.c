@@ -15,8 +15,8 @@ void test_InsertionSort()
 
 	int* sortedArray = insertionSort(arr, n_sort);
 
-	printf("Task 1: Insertionsort\n");
-	printArray(sortedArray, n_sort);
+	printf("Task 1 and 4: Insertionsort\n");
+	printPersonalnumber(sortedArray, n_sort);
 	printf("\n\n");
 }
 
@@ -32,8 +32,8 @@ void test_MergeSort()
 
 	MergeSort(A, p, r);
 
-	printf("Task 2: Merge Sort \n");
-	printArray(A, n_merge);
+	printf("Task 2 and 4: Merge Sort \n");
+	printPersonalnumber(A, n_merge);
 	printf("\n\n");
 }
 
@@ -71,57 +71,65 @@ void test_InsertionSort_loadf()
 	printf("The correct solution\n");
 	printArray(solutionArr, n);
 
-	printf("Default data\n");
-	printArray(problemArr, n);
-
 }
 
 void test_MergeSort_loadf()
 {
 	//################TASK5 LOAD FILES - MERGE SORT#######################################
-char sortingProblem[] = { "../sorting_problems/test-100000-1-problem" };
-char sortingSolution[] = { "../sorting_problems/test-100000-1-solution" };
-int* problemArr = load_file(sortingProblem);
-int* solutionArr = load_file(sortingSolution);
+	char sortingProblem[] = { "../sorting_problems/test-100000-1-problem" };
+	char sortingSolution[] = { "../sorting_problems/test-100000-1-solution" };
+	int* problemArr = load_file(sortingProblem);
+	int* solutionArr = load_file(sortingSolution);
 
-int n = problemArr[0] + 1;
-int p = 1;
-int r = n - 1;
+	int n = problemArr[0] + 1;
+	int p = 1;
+	int r = n - 1;
 
-double time_spent = 0.0; //to store execution time
-
-
-printf("Task 5: Merge Sort\n\n");
-
-printf("Default data\n");
-printArray(problemArr, n);
-
-clock_t start = clock();
-int* sortedArray_loadf = MergeSort_loadf(problemArr, p, r);
-clock_t end = clock();
-
-time_spent= ((float)(end - start)) / CLOCKS_PER_SEC;
+	double time_spent = 0.0; //to store execution time
 
 
-printf("Merge Sort took %f seconds to execute \n", time_spent);
+	printf("Task 5: Merge Sort\n\n");
+
+	printf("Default data\n");
+	printArray(problemArr, n);
+
+	clock_t start = clock();
+	int* sortedArray_loadf = MergeSort_loadf(problemArr, p, r);
+	clock_t end = clock();
+
+	time_spent = ((float)(end - start)) / CLOCKS_PER_SEC;
 
 
-printf("Sorted array\n");
-printArray(sortedArray_loadf, n);
+	printf("Merge Sort took %f seconds to execute \n", time_spent);
 
-printf("The correct solution\n");
-printArray(solutionArr, n);
 
+	printf("Sorted array\n");
+	printArray(sortedArray_loadf, n);
+
+	printf("The correct solution\n");
+	printArray(solutionArr, n);
+
+}
+
+void printPersonalnumber(int arr[], int n)
+{
+	for (int i = 0; i < n && i <= 100; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+	printf("\n\n\n");
 }
 
 void printArray(int arr[], int n)
 {
-
-
-	for (int i = 0; i < n && i<=100; i++)
+	if (n >= 100) {
+		printf("Only printing the first 100 values of %d.\n", n);
+	}
+	for (int i = 1; i < n && i<=100; i++)
 	{
 		printf("%d ", arr[i]);
 	}
+	printf("...");
 	printf("\n\n\n");
 }
 
