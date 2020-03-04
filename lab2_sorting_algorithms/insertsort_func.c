@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <math.h>
 
+//Insertion Sort - refer to pesudeo code in course book
 int* insertionSort(int arr[], int n, int pers){
 	int key = 0;
 	int i = 0;

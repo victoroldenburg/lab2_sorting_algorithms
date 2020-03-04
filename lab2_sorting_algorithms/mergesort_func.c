@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <math.h>
 
+//Merge and Merge Sort - refer to pesudeo code in course book
 int* Merge(int* A, int p, int q, int r) {
 	const int n1 = q - p + 1;
 	const int n2 = r - q;
