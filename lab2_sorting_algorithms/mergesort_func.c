@@ -9,7 +9,7 @@ int* Merge(int* A, int p, int q, int r) {
 	const int n1 = q - p + 1;
 	const int n2 = r - q;
 
-	int* L = (int*)calloc(n1 + 8, sizeof(int));
+	int* L = (int*)calloc(n1 + 8, sizeof(int));//Works, compensation for memory bits of 8. Warnings are compiler-dependent
 	int* R = (int*)calloc(n2 + 8, sizeof(int));
 
 	if (R != 0 && L != 0) {
