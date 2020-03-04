@@ -1,23 +1,16 @@
-#include "insertsort.h"
-#include "load_file.h"
-#include "mergesort.h"
 #include "test.h"
-#include <stdbool.h>
-#include <stdio.h>
-#include < stdlib.h >
-#include <math.h>
 
 int main()
 {
 	//#######START OF TEST - LAB2#######
 
-	test_InsertionSort();
+	test_InsertionSort(); //Insertion sort, task 1 and 4
 
-	test_MergeSort();
+	test_MergeSort(); //Merge sort, task 2 and 4
 
-	test_InsertionSort_loadf();
+	test_InsertionSort_loadf(); //Insertion sort, load file, task 5
 
-	test_MergeSort_loadf();
+	test_MergeSort_loadf(); //Insertion sort, load file, task 5
 
 	return 0;
 
